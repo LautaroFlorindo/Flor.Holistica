@@ -1,0 +1,76 @@
+.divSesionesGuias{
+    @include di-flex(row, center, flex-start);
+    margin-bottom: $mrg-bot;
+}
+.sesionesGuias{
+    @include di-flex(column, flex-start, center);
+    margin: 0px 0px 20px;
+    h3{
+        @extend %titles;
+    }
+}
+
+.accordSesiones{
+    width: 900px;
+    @media (max-width:992px) {
+        width: 80vw;
+    }
+}
+
+.accordTitle{
+    background-color: #712c33;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    div{
+        img{
+            width: 25px;
+            transition: transform 0.15s ease;
+        }
+    }
+
+    &::after{
+        margin: 0;
+        display: none;
+    }
+
+    &:not(.collapsed){
+        background-color: #371519;
+        color: white;
+        box-shadow: none;
+        transform: scale(101%);
+    }
+
+    &:not(.collapsed) div img{
+        transform: rotate(180deg);
+        transition: all 0.15s ease;
+    }
+
+    &:focus{
+        box-shadow: none;
+    }
+
+    &:hover{
+        background-color: #371519;
+    }
+}
+
+.accordDivTitle{
+    width: 95%;
+    text-align: center;
+}
+
+.accordBody{
+    background-color: rgba(000,000,000,.3);
+    color: white;
+}
+
+.accordDivBoton{
+    @include di-flex(row, center, flex-start);
+    margin-bottom: 25px;
+}
+
+.accordBoton{
+    @extend %boton1;
+}

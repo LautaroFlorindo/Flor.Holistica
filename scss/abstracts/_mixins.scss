@@ -1,0 +1,6 @@
+@mixin di-flex($flexdi, $justicon, $alitems){
+    display: flex;
+    flex-direction: $flexdi;
+    justify-content: $justicon;
+    align-items: $alitems;
+}

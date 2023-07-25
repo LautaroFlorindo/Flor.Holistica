@@ -1,0 +1,105 @@
+#introRecGuias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "video texto";
+    margin-top: $mrg-top;
+    margin-bottom: $mrg-bot;
+
+    @media(max-width:992px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: "video"
+            "texto";
+    }
+}
+
+.videoRecGuias {
+    grid-area: video;
+    @include di-flex(row, end, flex-start);
+
+    @media(max-width:992px) {
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    video {
+        background-color: rgba(black, 0.3);
+        object-fit: cover;
+        border-radius: 10px;
+        height: 90vh;
+        padding: 0;
+        @media(max-width:992px) {
+            width: 80vw;
+            max-height: 578px;
+            object-fit:none;
+        }
+        @media(max-width:576px){
+            object-fit:fill;
+        }
+    }
+}
+
+.textoRecGuias {
+    grid-area: texto;
+    background-color: #712c33;
+    width: 33vw;
+    height: 90vh;
+    border-radius: 10px;
+    @include di-flex(column, center, flex-start);
+
+    @media(max-width:992px) {
+        width: 80vw;
+        height: auto;
+        justify-self: center;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        padding: 20px 20px 0px;
+        font-weight: $f-weig-h;
+    }
+
+    p {
+        color: #ffffff;
+        padding: 20px;
+    }
+}
+
+#section2RecGuias {
+    @include di-flex(row, space-around, flex-start);
+    flex-wrap: wrap;
+    background-image: url(../img/reconectando/fondosec2.jpeg);
+    background-size: cover;
+    height: auto;
+    margin-bottom: $mrg-bot;
+}
+
+.boxParrafoRecGuias{
+    display: flex;
+    width: 600px;
+    height: 650px;
+    margin: 30px 0;
+    @media(max-width:1200px){
+        height: auto;
+        width: 80vw;
+        margin: 0px 30px;
+    }
+}
+
+.parrafoRecGuias {
+    @include di-flex(column, flex-start, center);
+    padding: 30px;
+    background-color: rgba(000, 000, 000, 0.3);
+    border-radius: 10px;
+
+    h2{
+        font-size: 30px;
+        text-align: center;
+        font-weight: $f-weig-h;
+    }
+    h2, p{
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,91 @@
+#mainContacto {
+    @include di-flex(column, flex-start, center);
+    margin-top: $mrg-top;
+
+    h1 {
+        @extend %titles;
+    }
+}
+
+.redesFormulario {
+    @include di-flex(row, space-around, space-around);
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: $mrg-bot;
+
+    @media(max-width:768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.misRedes {
+    @include di-flex(column, space-between, space-around);
+    width: 550px;
+    background-color: #712c33;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+
+
+    h2 {
+        text-align: center;
+        font-weight: $f-weig-h;
+    }
+
+    @media(max-width:768px) {
+        width: 80vw;
+    }
+}
+
+.supuestoForm{
+    width: 100%;
+    @media(max-width:768px){
+        height: 350px;
+    }
+}
+
+.gridRedes {
+    display: grid;
+    grid-template-areas: "redes spoti"
+        "redes spoti";
+
+    @media(max-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.instaTelegram {
+    grid-area: redes;
+    @include di-flex(column, space-around, flex-start);
+
+    a {
+        width: 100px;
+        transition: all ease 0.3s;
+        img {
+            width: 100px;
+        }
+        &:hover{
+            transform: scale(105%);
+        }
+    }
+
+    @media(max-width:768px) {
+        flex-direction: row;
+        align-items: space-around;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.spotiList {
+    grid-area: spoti;
+    transition: all 0.3s ease;
+    &:hover{
+        transform: scale(103%);
+    }
+    @media(max-width:768px) {
+        width: 90vw;
+    }
+}

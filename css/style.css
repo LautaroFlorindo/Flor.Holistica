@@ -22,19 +22,19 @@ a {
   }
 }
 
-.botonLibro, .accordBoton, .botonBlog {
+.botonLibro, .accordBoton, .botonForm, .botonBlog {
   background-color: #ffffff;
   color: #712c33;
   border-color: transparent;
   font-weight: bold;
   transition: all ease 0.3s;
 }
-.botonLibro:hover, .accordBoton:hover, .botonBlog:hover {
+.botonLibro:hover, .accordBoton:hover, .botonForm:hover, .botonBlog:hover {
   transform: scale(105%);
   background-color: #c86c28;
   border-color: transparent;
 }
-.botonLibro:active, .accordBoton:active, .botonBlog:active {
+.botonLibro:active, .accordBoton:active, .botonForm:active, .botonBlog:active {
   background-color: #c86c28 !important;
   border-color: transparent !important;
   transition: 0.1s ease;
@@ -165,7 +165,7 @@ body {
   background-color: rgba(240, 231, 222, 0.2);
   backdrop-filter: blur(2px);
 }
-.textoCarrusel h1 {
+.textoCarrusel h1, .textoCarrusel h2 {
   font-family: PT Serif;
   font-weight: 700;
   font-size: 35px;
@@ -173,7 +173,7 @@ body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 576px) {
-  .textoCarrusel h1 {
+  .textoCarrusel h1, .textoCarrusel h2 {
     font-size: 27px;
   }
 }
@@ -266,7 +266,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
   }
 }
-.boxTitleCards h2 {
+.boxTitleCards h3 {
   font-weight: 700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   font-size: 20px;
@@ -503,6 +503,12 @@ body {
   align-items: center;
   margin-top: 7.5vh;
 }
+@media (max-width: 576px) {
+  #mainContacto h1 {
+    font-size: 26px;
+  }
+}
+
 .redesFormulario {
   display: flex;
   flex-direction: row;
@@ -510,7 +516,7 @@ body {
   align-items: space-around;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 50px;
+  margin-top: 20px;
 }
 @media (max-width: 768px) {
   .redesFormulario {
@@ -529,6 +535,7 @@ body {
   border-radius: 10px;
   color: white;
   padding: 30px;
+  margin-bottom: 50px;
 }
 .misRedes h2 {
   text-align: center;
@@ -540,13 +547,40 @@ body {
   }
 }
 
-.supuestoForm {
-  width: 100%;
+.formContacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 20px;
 }
-@media (max-width: 768px) {
-  .supuestoForm {
-    height: 350px;
-  }
+.formContacto legend {
+  text-align: center;
+  margin: 0;
+}
+.formContacto legend h3 {
+  margin: 0;
+}
+.formContacto input {
+  margin-top: 10px;
+}
+.formContacto textarea {
+  resize: none;
+  margin-top: 10px;
+}
+
+.botonForm {
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.captchaButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .gridRedes {

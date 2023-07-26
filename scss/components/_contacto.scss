@@ -4,14 +4,18 @@
 
     h1 {
         @extend %titles;
+        @media(max-width:576px){
+            font-size: 26px;
+        }
     }
+    
 }
 
 .redesFormulario {
     @include di-flex(row, space-around, space-around);
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: $mrg-bot;
+    margin-top: 20px;
 
     @media(max-width:768px) {
         flex-direction: column;
@@ -26,6 +30,7 @@
     border-radius: 10px;
     color: white;
     padding: 30px;
+    margin-bottom: $mrg-bot;
 
 
     h2 {
@@ -38,11 +43,36 @@
     }
 }
 
-.supuestoForm{
-    width: 100%;
-    @media(max-width:768px){
-        height: 350px;
+.formContacto{
+    @include di-flex(column, center, stretch);
+    margin-bottom: 20px;
+    legend{
+        text-align:center;
+        margin: 0;
+        h3{
+            margin: 0;
+        }
     }
+    input{
+        margin-top: 10px;
+    }
+
+    textarea{
+        resize: none;
+        margin-top: 10px;
+    }
+}
+
+.botonForm{
+    @extend %boton1;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px
+}
+
+.captchaButton{
+    @include di-flex(row, center, center);
 }
 
 .gridRedes {

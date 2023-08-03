@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../img/favicon/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/header/favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;500;600&family=PT+Serif:wght@400;700&display=swap"
         rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
@@ -30,8 +30,8 @@
         <div>
             <nav id="headerBox" class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a href="../index.html">
-                        <img class="logoHeader" src="../img/header/favicon.png" alt="Logotipo de FlorHolística">
+                    <a href="../../index.html">
+                        <img class="logoHeader" src="../../img/header/favicon.png" alt="Logotipo de FlorHolística">
                     </a>
                     <button class="navbar-toggler botonNav" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -41,19 +41,39 @@
                     <div class="collapse navbar-collapse barraNave" id="navbarNav">
                         <ul class="navbar-nav ulBarraNave">
                             <li class="nav-item ulBarraNaveLi">
-                                <a class="nav-link ulBarraNaveA activa" href="../index.html">HOLA 💛</a>
+                                <a class="nav-link ulBarraNaveA" href="../../index.html">INICIO</a>
                             </li>
                             <li class="nav-item ulBarraNaveLi">
-                                <a class="nav-link ulBarraNaveA" href="./reconectando.html">RE-CONECTANDO</a>
+                                <div class="dropdown-center">
+                                    <a id="activo" class="btn dropdown-toggle ulBarraNaveA" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">MÁS SOBRE MÍ
+                                    </a>
+                                    <ul class="dropdown-menu dropDownNavBar">
+                                        <li><a href="./reconectando.html" class="dropdown-item"
+                                                type="button">ENERGÍA FEMENINA SAGRADA</a></li>
+                                        <li><a id="activo" href="./losguias.html" class="dropdown-item"
+                                                type="button">LOS GUÍAS, MIS AMIGOS</a></li>
+                                        <li><a href="../infosagrada.html" class="dropdown-item" type="button">Ver
+                                                todo...</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="nav-item ulBarraNaveLi">
-                                <a id="activo" class="nav-link ulBarraNaveA" href="./losguias.html">LOS GUÍAS</a>
+                                <div class="btn-group">
+                                    <a type="button" class="btn dropdown-toggle ulBarraNaveA" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        TIENDA
+                                    </a>
+                                    <ul class="dropdown-menu dropDownNavBar">
+                                        <li><a class="dropdown-item" href="#">CURSOS</a></li>
+                                        <li><a class="dropdown-item" href="#">LIBRO</a></li>
+                                        <li><a class="dropdown-item" href="../tienda.html">Ver todo...</a></li>
+
+                                    </ul>
+                                </div>
                             </li>
                             <li class="nav-item ulBarraNaveLi">
-                                <a class="nav-link ulBarraNaveA" href="./infosagrada.html">BLOG</a>
-                            </li>
-                            <li class="nav-item ulBarraNaveLi">
-                                <a class="nav-link ulBarraNaveA" href="./dondevibro.html">HABLEMOS</a>
+                                <a class="nav-link ulBarraNaveA" href="../dondevibro.html">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +88,7 @@
         <section id="introRecGuias">
             <div class="videoRecGuias">
                 <video controls>
-                    <source src="../img/losguias/video.losguias.mp4" type="video/mp4">
+                    <source src="../../img/losguias/video.losguias.mp4" type="video/mp4">
                 </video>
             </div>
             <article class="textoRecGuias">
@@ -147,7 +167,7 @@
                                     <b>Sesiones PERSONALES</b> de Registros Akáshicos
                                 </div>
                                 <div>
-                                    <img src="../img/losguias/arrowAccord.png" alt="Flecha indicadora de dirección">
+                                    <img src="../../img/losguias/arrowAccord.png" alt="Flecha indicadora de dirección">
                                 </div>
                             </button>
                         </h4>
@@ -166,7 +186,7 @@
                                     la antigüedad.
                                 </p>
                                 <div class="accordDivBoton">
-                                    <a href="../pages/dondevibro.html" class="btn btn-primary accordBoton">Me gustaría
+                                    <a href="../../pages/dondevibro.html" class="btn btn-primary accordBoton">Me gustaría
                                         saber más</a>
                                 </div>
                             </div>
@@ -181,7 +201,7 @@
                                     <b>Sesiones GRUPALES</b> de Registros Akáshicos
                                 </div>
                                 <div>
-                                    <img src="../img/losguias/arrowAccord.png" alt="Flecha indicadora de dirección">
+                                    <img src="../../img/losguias/arrowAccord.png" alt="Flecha indicadora de dirección">
                                 </div>
                             </button>
                         </h2>
@@ -193,7 +213,7 @@
                                     <br><b>Las sesiones grupales son mensuales</b>, tienen un valor mínimo y un cupo reducido de participantes. En cada sesión se toca un tema en particular, y las preguntas se relacionan a él.
                                 </p>
                                 <div class="accordDivBoton">
-                                    <a href="../pages/dondevibro.html" class="btn btn-primary accordBoton">Me gustaría coordinar una</a>
+                                    <a href="../../pages/dondevibro.html" class="btn btn-primary accordBoton">Me gustaría coordinar una</a>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +227,7 @@
                                     <b>SEMINARIOS</b> de Registros Akáshicos
                                 </div>
                                 <div>
-                                    <img src="../img/losguias/arrowAccord.png" alt="Flecha indicadora de dirección">
+                                    <img src="../../img/losguias/arrowAccord.png" alt="Flecha indicadora de dirección">
                                 </div>
                             </button>
                         </h2>
@@ -230,7 +250,7 @@
                                     <br><b>¿Estás listo para abrirle las puertas a este mundo?</b>
                                 </p>
                                 <div class="accordDivBoton">
-                                    <a href="../pages/dondevibro.html" class="btn btn-primary accordBoton">Cuándo es el
+                                    <a href="../../pages/dondevibro.html" class="btn btn-primary accordBoton">Cuándo es el
                                         próximo?</a>
                                 </div>
                             </div>
@@ -248,19 +268,19 @@
             <section class="mb-4 footerIcons">
 
                 <a class="btn text-white btn-floating m-1 botonIconosFooter" style="background-color: #55acee;"
-                    href="https://www.telegram.org/" target="_blank" role="button"><i class="fab fa-twitter"></i><img
-                        class="iconosFooter" src="../img/footer/tg.png" alt="Ícono de acceso directo a Telegram">
+                    href="https://t.me/+K5vNAke3xFs5ODJh" target="_blank" role="button"><i class="fab fa-twitter"></i><img
+                        class="iconosFooter" src="../../img/footer/tg.png" alt="Ícono de acceso directo a Telegram">
                 </a>
 
                 <a class="btn text-white btn-floating m-1 botonIconosFooter" style="background-color: #ac2bac;"
                     href="https://www.instagram.com/flor.holistica/" target="_blank" role="button"><i
-                        class="fab fa-instagram"></i><img class="iconosFooter" src="../img/footer/ig.png" alt="Ícono de acceso directo a Instagram">
+                        class="fab fa-instagram"></i><img class="iconosFooter" src="../../img/footer/ig.png" alt="Ícono de acceso directo a Instagram">
                 </a>
 
                 <a class="btn text-white btn-floating m-1 botonIconosFooter" style="background-color: green;"
                     href="https://open.spotify.com/show/38t8SnzBgAfpOmu0D6reLW?si=69ffca99ad9e4bec" target="_blank"
                     role="button"><i class="fab fa-linkedin-in"></i><img class="iconosFooter"
-                        src="../img/footer/spot.png" alt="Ícono de acceso directo a Spotify">
+                        src="../../img/footer/spot.png" alt="Ícono de acceso directo a Spotify">
                 </a>
             </section>
         </div>

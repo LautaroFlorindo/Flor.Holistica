@@ -1,70 +1,92 @@
-.logoHeader{
+.logoHeader {
     width: 75px;
-    @media (max-width:576px){
+
+    @media (max-width:576px) {
         width: 55px;
     }
 }
 
-#headerBox{
+#headerBox {
     position: fixed;
     z-index: 9;
     margin: 0;
     padding: 0.5px;
-    top:0;
+    top: 0;
     width: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.barraNave{
+.barraNave {
     width: 100%;
     justify-content: flex-end;
 }
 
-.ulBarraNave{
+.ulBarraNave {
     display: flex;
     align-items: end;
     padding: 0;
 }
 
-.ulBarraNaveLi{
+.ulBarraNaveLi {
     padding: 0 15px;
-    @media (max-width:990px){
+
+    @media (max-width:990px) {
         padding-right: 5px;
     }
 }
 
-.ulBarraNaveA{
+.ulBarraNaveA {
     text-decoration: none;
     font-weight: bold;
     color: #712c33;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s, color 0.3s ease;
-    &:hover{
-        color: #371519;
-        background-size: 100% 2px;
+    padding: 10px 0px;
+    @extend %hoverNavBar;
+}
+
+.dropDownNavBar {
+    position:absolute !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+
+
+    li {
+
+        a {
+            color: nth($pal, 1);
+            @extend %hoverNavBar;
+
+            &:active {
+                background-color: nth($pal, 2);
+                color: nth($pal, 4);
+            }
+        }
+    }
+
+    @media(max-width:992px) {
+        left: -90% !important;
+        background-color: nth($pal, 2);
     }
 }
 
-.iconoNav{
-    background-image:url(../img/header/planet.png);
+.iconoNav {
+    background-image: url(../img/header/planet.png);
     width: 2em;
     height: 2em;
 }
 
-.botonNav{
+.botonNav {
     border-color: transparent;
-    &:focus{
+
+    &:focus {
         border-color: #712c33;
         box-shadow: none;
         background-size: 100% 2px;
     }
 }
 
-#activo{
+#activo {
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0% 100%;
     background-repeat: no-repeat;

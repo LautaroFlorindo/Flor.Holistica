@@ -1,7 +1,7 @@
 #introRecGuias {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "video texto";
+    grid-template-areas: "texto video";
     margin-top: $mrg-top;
     margin-bottom: $mrg-bot;
 
@@ -15,7 +15,7 @@
 
 .videoRecGuias {
     grid-area: video;
-    @include di-flex(row, end, flex-start);
+    @include di-flex(row, flex-start, flex-start);
 
     @media(max-width:992px) {
         justify-content: center;
@@ -48,6 +48,7 @@
     height: 90vh;
     border-radius: 10px;
     @include di-flex(column, center, flex-start);
+    justify-self: end;
 
     @media(max-width:992px) {
         width: 80vw;

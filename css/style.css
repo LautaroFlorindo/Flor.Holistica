@@ -33,11 +33,27 @@ a {
   transform: scale(105%);
   background-color: #c86c28;
   border-color: transparent;
+  color: #ffffff;
 }
 .botonLibro:active, .accordBoton:active, .botonForm:active, .botonBlog:active {
   background-color: #c86c28 !important;
   border-color: transparent !important;
   transition: 0.1s ease;
+}
+
+.dropDownNavBar li a, .ulBarraNaveA {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition: background-size 0.2s, color 0.3s ease;
+}
+.dropDownNavBar li a:hover, .ulBarraNaveA:hover {
+  color: #371519;
+  background-size: 100% 2px;
+  background-color: transparent;
 }
 
 .logoHeader {
@@ -84,15 +100,27 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: #712c33;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size 0.3s, color 0.3s ease;
+  padding: 10px 0px;
 }
-.ulBarraNaveA:hover {
+
+.dropDownNavBar {
+  position: absolute !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+.dropDownNavBar li a {
+  color: #712c33;
+}
+.dropDownNavBar li a:active {
+  background-color: #ffffff;
   color: #371519;
-  background-size: 100% 2px;
+}
+@media (max-width: 992px) {
+  .dropDownNavBar {
+    left: -90% !important;
+    background-color: #ffffff;
+  }
 }
 
 .iconoNav {
@@ -307,7 +335,7 @@ body {
 #introRecGuias {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "video texto";
+  grid-template-areas: "texto video";
   margin-top: 7.5vh;
   margin-bottom: 50px;
 }
@@ -323,7 +351,7 @@ body {
   grid-area: video;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 @media (max-width: 992px) {
@@ -364,6 +392,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  justify-self: end;
 }
 @media (max-width: 992px) {
   .textoRecGuias {

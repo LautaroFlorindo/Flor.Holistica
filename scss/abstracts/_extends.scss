@@ -22,10 +22,27 @@
         transform: scale(105%);
         background-color: #c86c28;
         border-color: transparent;
+        color: #ffffff;
     }
     &:active{
         background-color: #c86c28 !important;
         border-color: transparent !important;
         transition: 0.1s ease;
+    }
+}
+
+%hoverNavBar{
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-color: rgba(#000000, 0);
+    border: none;
+    transition: background-size .2s, color 0.3s ease;
+
+    &:hover {
+        color: nth($pal, 4);
+        background-size: 100% 2px;
+        background-color: transparent;
     }
 }

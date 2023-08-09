@@ -1,0 +1,52 @@
+#introCarrusel {
+    margin: 0 3vw;
+    margin-bottom: $mrg-bot;
+    width: 95vw;
+}
+
+.imgCarrusel{
+    height: 85vh;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+.textoCarrusel {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    bottom: 0;
+    background-color: rgba(240, 231, 222, 0.2);
+    backdrop-filter: blur(2px);
+
+    h1, h2 {
+        font-family: $font-fam1;
+        font-weight: $f-weig-h;
+        font-size: 35px;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(000,000,000,0.7);
+
+        @media(max-width:576px){
+            font-size: 27px;
+        }
+    }
+}
+
+.botonCarrusel {
+    position: relative;
+    bottom: 0;
+    background-color: #f0e7de !important;
+    height: 10px !important;
+    border-radius: 13px;
+    margin-right: 10px !important;
+    opacity: .2 !important;
+}
+
+.botonesCarrusel {
+    margin-bottom: 0;
+}
+
+.active {
+    opacity: 1 !important;
+}

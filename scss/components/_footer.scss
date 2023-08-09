@@ -1,16 +1,63 @@
-.footerIcons{
-    margin-bottom: 0 !important;
-}
-.footerDiv{
-    padding: 0rem !important;
+.botonIconosFooter {
+    &:hover .iconosFooter {
+        transform: scale(115%)
+    }
+
+    ;
 }
 
-.botonIconosFooter{
-    &:hover .iconosFooter{
-        transform: scale(115%)
-    };
-}
-.iconosFooter{
+.iconosFooter {
     width: 25px;
     transition: 0.3s ease;
+}
+
+.footer {
+    background-color: nth($pal, 2);
+    padding: 20px 0px 10px;
+    text-align: center;
+
+    @media (max-width:720px) {
+        text-align: center;
+        padding: 5%;
+    }
+}
+
+.listFooter {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    font-size: 1em;
+
+    a {
+        text-decoration: none;
+        color: nth($pal, 1);
+        transition: 0.5s;
+
+        &:hover {
+            color: nth($pal, 4);
+        }
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin: 0px 30px;
+
+            @media (max-width:720px) {
+                display: block;
+                margin: 10px 0px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.copyrightFooter {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.5;
 }
